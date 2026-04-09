@@ -21,9 +21,9 @@ class MainPage extends StatelessWidget {
           builder: (context, constraints) {
             final h = constraints.maxHeight;
             const divH = 16.0;
-            final titleH = h * 0.25 - divH;
+            final titleH = (h * 0.25 - divH).clamp(0.0, double.infinity);
             final imageH = h * 0.25;
-            final bottomH = h * 0.50 - divH;
+            final bottomH = (h * 0.50 - divH).clamp(0.0, double.infinity);
 
             return Column(
               children: [
@@ -48,7 +48,7 @@ class MainPage extends StatelessWidget {
                                   const EdgeInsets.symmetric(horizontal: 16),
                               child: Text(
                                 'DUCK & SWAN',
-                                style: GoogleFonts.italiana(
+                                style: GoogleFonts.dmSans(
                                   fontSize: 26,
                                   letterSpacing: 5.0,
                                   fontWeight: FontWeight.w700,
@@ -94,7 +94,7 @@ class MainPage extends StatelessWidget {
                         children: [
                           Text(
                             '"Tread with care and linger long,\nto catch a glimpse or hear a song."',
-                            style: GoogleFonts.italiana(
+                            style: GoogleFonts.dmSans(
                               fontSize: 16,
                               color: const Color(0xFF9BA3B2),
                               height: 1.75,
@@ -201,7 +201,7 @@ class _BirdPicker extends StatelessWidget {
           value: birds.contains(selected) ? selected : null,
           hint: Text(
             'Select a bird',
-            style: GoogleFonts.italiana(
+            style: GoogleFonts.dmSans(
               fontSize: 13,
               letterSpacing: 3.0,
               color: const Color(0xFF6B7080),
@@ -216,11 +216,11 @@ class _BirdPicker extends StatelessWidget {
               value: bird,
               child: Text(
                 bird.displayName.toUpperCase(),
-                style: GoogleFonts.italiana(
+                style: GoogleFonts.dmSans(
                   fontSize: 13,
                   letterSpacing: 3.0,
                   fontWeight: FontWeight.w600,
-                  color: const Color(0xFFE8DFC0),
+                  color: const Color(0xFF9BA3B2),
                 ),
               ),
             );
@@ -267,7 +267,7 @@ class _ActionButton extends StatelessWidget {
             child: Center(
               child: Text(
                 label,
-                style: GoogleFonts.italiana(
+                style: GoogleFonts.dmSans(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 3.5,
