@@ -20,7 +20,7 @@ class BirdBloc extends Bloc<BirdEvent, BirdState> {
   }
 
   void _onBirdSelected(BirdSelected event, Emitter<BirdState> emit) {
-    emit(BirdState(currentBird: event.bird, isAnimating: false));
+    emit(BirdState(currentBird: state.currentBird, isAnimating: false));
   }
 
   void _onActionPressed(ActionPressed event, Emitter<BirdState> emit) {

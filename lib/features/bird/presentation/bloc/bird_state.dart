@@ -18,5 +18,5 @@ class BirdState extends Equatable {
   }
 
   @override
-  List<Object> get props => [currentBird, isAnimating];
+  List<Object> get props => [currentBird];
 }

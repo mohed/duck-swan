@@ -2,12 +2,12 @@ import 'package:duck_swan/features/bird/domain/entities/i_bird.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class BirdPicker extends StatelessWidget {
+class _BirdPicker extends StatelessWidget {
   final List<IBird> birds;
   final IBird selected;
   final ValueChanged<IBird?> onChanged;
 
-  const BirdPicker({
+  const _BirdPicker({
     super.key,
     required this.birds,
     required this.selected,

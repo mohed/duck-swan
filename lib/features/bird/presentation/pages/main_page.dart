@@ -108,7 +108,7 @@ class MainPage extends StatelessWidget {
                           BlocBuilder<BirdBloc, BirdState>(
                             builder: (context, state) {
                               final bloc = context.read<BirdBloc>();
-                              return BirdPicker(
+                              return _BirdPicker(
                                 birds: bloc.availableBirds,
                                 selected: state.currentBird,
                                 onChanged: (bird) =>

@@ -14,5 +14,5 @@ Future<void> initDependencies() async {
   sl.registerLazySingleton(() => GetAvailableBirds(sl<IBirdRepository>()));
 
   // BLoC — factory so each BlocProvider gets a fresh instance
-  sl.registerFactory(() => BirdBloc(sl<GetAvailableBirds>()));
+  sl.registerFactory(() => BirdBloc(sl<IBirdRepository>()));
 }
